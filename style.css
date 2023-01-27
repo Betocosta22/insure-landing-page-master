@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0; 
+}
+@media only screen and (max-width: 375px){
+    *{
+        display: block;
+        text-align: center;
+    }
+    
+
+}
+@media only screen and (max-width: 1440px){
+
+
+}
+h1 {
+    font-family: 'DM Serif Display', serif;
+}
+header {
+    background-color: #ffffff;
+    width: 100%;
+    height: 10%;
+}
