@@ -1,17 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap');
+
+:root {
+/*----Colors----*/
+/*---Primary---*/
+--DarkViolet: hsl(256, 26%, 20%);
+--GrayishBlue: hsl(216, 30%, 68%);
+/*---Neutral---*/
+--VeryDarkViolet: hsl(270, 9%, 17%);
+--DarkGrayishViolet: hsl(273, 4%, 51%);
+--VeryLightGray: hsl(0, 0%, 98%);
+
+}
 *{
     margin: 0;
     padding: 0; 
 }
 @media only screen and (max-width: 375px){
-    *{
-        display: block;
-        text-align: center;
-    }
-    
+*{
+    display: block;
+    text-align: center;
+}   
+header {
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+}
+nav {
+    background-color: var(--VeryDarkViolet);
+    height: 100vh;
+    color: var(--VeryLightGray);
+    font-weight: bold;
+    background-image: url(./images/bg-pattern-mobile-nav.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+ul {
+    padding: 8% 2%;
+    height: 50%;
+    text-align: center;
+    display: block;
+}
+a {
+    color: var(--VeryLightGray);
+    transition-property: border;
+    transition-duration: 0.1s;    
+}
+a:active {
+    border: solid;
+}
+.family {
+    background-image: url(./images/image-intro-mobile.jpg);
+    width: 375px;
+    height: 440px;
+}
+.plans {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/bg-pattern-intro-left-mobile.svg),   url(./images/bg-pattern-intro-right-mobile.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: top 0% left 0%, bottom -150% right 0%;
+    padding: 10% 0;
 
+
+}
+.plans p {
+    font-size: small;
+}
 }
 @media only screen and (max-width: 1440px){
 
@@ -21,7 +77,26 @@ h1 {
     font-family: 'DM Serif Display', serif;
 }
 header {
-    background-color: #ffffff;
+    background-color: var(--VeryLightGray);
     width: 100%;
     height: 10%;
+}
+nav {
+    font-family: 'Karla', sans-serif;
+}
+button {
+    text-decoration: none;
+    background-color: none;
+    border-color: none;
+
+}
+a {
+    text-decoration: none;
+    padding: 2%;
+}
+.plans {
+    background-color: var(--DarkViolet);
+    color: var(--VeryLightGray);
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
 }
