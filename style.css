@@ -1,7 +1,9 @@
+/*---Headings---*/
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
-
+/*Family: [DM Serif Display];*/
+/*---Body---*/
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap');
-
+/*Family: [Karla];*/
 :root {
 /*----Colors----*/
 /*---Primary---*/
@@ -13,90 +15,66 @@
 --VeryLightGray: hsl(0, 0%, 98%);
 
 }
-*{
-    margin: 0;
-    padding: 0; 
-}
-@media only screen and (max-width: 375px){
-*{
-    display: block;
-    text-align: center;
-}   
-header {
-    width: 100%;
-    height: 100%;
-    padding: 5%;
-}
-nav {
-    background-color: var(--VeryDarkViolet);
-    height: 100vh;
-    color: var(--VeryLightGray);
-    font-weight: bold;
-    background-image: url(./images/bg-pattern-mobile-nav.svg);
-    background-repeat: no-repeat;
-    background-position: bottom;
-}
-ul {
-    padding: 8% 2%;
-    height: 50%;
-    text-align: center;
-    display: block;
-}
-a {
-    color: var(--VeryLightGray);
-    transition-property: border;
-    transition-duration: 0.1s;    
-}
-a:active {
-    border: solid;
-}
-.family {
-    background-image: url(./images/image-intro-mobile.jpg);
-    width: 375px;
-    height: 440px;
-}
-.plans {
-    width: 100%;
-    height: 100vh;
-    background-image: url(./images/bg-pattern-intro-left-mobile.svg),   url(./images/bg-pattern-intro-right-mobile.svg);
-    background-repeat: no-repeat, no-repeat;
-    background-position: top 0% left 0%, bottom -150% right 0%;
-    padding: 10% 0;
-
-
-}
-.plans p {
-    font-size: small;
-}
-}
 @media only screen and (max-width: 1440px){
 
-
 }
-h1 {
-    font-family: 'DM Serif Display', serif;
-}
-header {
-    background-color: var(--VeryLightGray);
-    width: 100%;
-    height: 10%;
-}
-nav {
-    font-family: 'Karla', sans-serif;
-}
-button {
-    text-decoration: none;
-    background-color: none;
-    border-color: none;
-
+body, ul {
+    margin: 0px;
+    padding: 0px;
 }
 a {
     text-decoration: none;
-    padding: 2%;
+    font-family: 'karla', sans-serif;
 }
-.plans {
-    background-color: var(--DarkViolet);
-    color: var(--VeryLightGray);
-    font-family: 'Karla', sans-serif;
-    font-weight: bold;
+a:hover {
+    border: solid;
+}
+#header {
+    box-sizing: border-box;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#menu {
+    display: flex;
+    list-style: none;
+    gap: .5rem;
+}
+#menu a {
+    display: block;
+    padding: .5rem;
+}
+#btn-mobile {
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    #btn-mobile {
+        display: block;
+    }
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background: var(--VeryDarkViolet);
+        transition: .6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: auto;
+        text-align: center;
+    }
+    #nav.active #menu {
+        height: calc(100vh - 70px);
+        visibility: visible;
+    }
+    #menu a {
+        padding: 1rem 0;
+        margin: 1rem;
+        color: var(--VeryLightGray);
+        font-weight: bold;
+        border-color: var(--VeryLightGray);
+    }
 }
