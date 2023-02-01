@@ -225,7 +225,33 @@ header a {
     .features h2 {
         margin: none;
     }
+    .features2 {
+        display: block;
+    }
     figure {
         display: none;
+    }
+    .work {
+        margin: 1em;
+        padding: 5em 1em;
+        background-color: var(--DarkViolet);
+        color: var(--VeryLightGray);
+
+    }
+    .work a {
+        color: var(--VeryLightGray);
+        border: solid;
+        border-color: var(--VeryLightGray);
+        letter-spacing: .2em;
+        padding: .5em 2em;
+        font-size: 14px;
+        border-width: 2px;
+        
+    }
+    .work a:active {
+        background-color: var(--VeryLightGray);
+        color: var(--DarkViolet);
+        border: none;
+        
     }
 }
